@@ -1,0 +1,85 @@
+<!DOCTYPE Theme PUBLIC "-//VideoLAN//DTD VLC Skins V2.0//EN" "skin.dtd">
+<Theme version="2.0">
+  <ThemeInfo name="Minimal" author="MrNakata" email="mrnakata@live.fr" webpage="http://mrnakata.deviantart.com/"/>
+
+  <!-- Created using the VLC Skin Editor 0.8.5.dev (http://www.videolan.org/vlc/skineditor.html)-->
+
+  <Font id="calibri" file="calibriz.ttf" size="11"/>
+  <Font id="calibri" file="Calibriz.ttf" size="10"/>
+  <Bitmap id="back" file="back.png" alphacolor="#FF00FF"/>
+  <Bitmap id="bottom" file="bottom.png" alphacolor="#FF00FF"/>
+  <Bitmap id="close" file="close.png" alphacolor="#FF00FF"/>
+  <Bitmap id="display" file="display.png" alphacolor="#FF00FF"/>
+  <Bitmap id="faster" file="faster.png" alphacolor="#FF00FF"/>
+  <Bitmap id="fullscreen" file="fullscreen.png" alphacolor="#FF00FF"/>
+  <Bitmap id="knob" file="knob.png" alphacolor="#FF00FF"/>
+  <Bitmap id="left" file="left.png" alphacolor="#FF00FF"/>
+  <Bitmap id="minimize" file="minimize.png" alphacolor="#FF00FF"/>
+  <Bitmap id="mute" file="mute.png" alphacolor="#FF00FF"/>
+  <Bitmap id="next" file="next.png" alphacolor="#FF00FF"/>
+  <Bitmap id="pause" file="pause.png" alphacolor="#FF00FF"/>
+  <Bitmap id="play" file="play.png" alphacolor="#FF00FF"/>
+  <Bitmap id="resize" file="resize.png" alphacolor="#FF00FF"/>
+  <Bitmap id="right" file="right.png" alphacolor="#FF00FF"/>
+  <Bitmap id="progress" file="progress.png" alphacolor="#FF00FF"/>
+  <Bitmap id="slower" file="slower.png" alphacolor="#FF00FF"/>
+  <Bitmap id="topleft" file="topleft.png" alphacolor="#FF00FF"/>
+  <Bitmap id="top" file="top.png" alphacolor="#FF00FF"/>
+  <Bitmap id="topright" file="topright.png" alphacolor="#FF00FF"/>
+  <Bitmap id="videobg" file="videobg.png" alphacolor="#FF00FF"/>
+  <Bitmap id="speaker" file="speaker.png" alphacolor="#FF00FF"/>
+  <Bitmap id="volumeknob" file="volumeknob.png" alphacolor="#FF00FF"/>
+  <Bitmap id="volume" file="volume.png" alphacolor="#FF00FF"/>
+  <Bitmap id="minimize2" file="minimize2.png" alphacolor="#FF00FF"/>
+  <Bitmap id="close2" file="close2.png" alphacolor="#FF00FF"/>
+  <Bitmap id="fullscreen2" file="fullscreen2.png" alphacolor="#FF00FF"/>
+  <Bitmap id="upban2" file="upban2.png" alphacolor="#FF00FF"/>
+  <Bitmap id="downban" file="downban.png" alphacolor="#FF00FF"/>
+
+  <Window id="Main">
+    <Layout id="Window" width="300" height="350" maxwidth="1920" maxheight="1080">
+      <Panel id="top layout" width="294" height="30" rightbottom="righttop">
+        <Image id="top middle" x="34" image="top" action="move" resize="scale" rightbottom="righttop"/>
+        <Image id="top left" image="topleft" action="move"/>
+        <Image id="top right" x="260" image="topright" action="move" lefttop="righttop" rightbottom="righttop"/>
+        <Image id="top ban" y="20" image="upban2" lefttop="righttop" rightbottom="rightbottom" xkeepratio="true" ykeepratio="true"/>
+      </Panel>
+      <Panel id="diplay layout" y="250" width="294" height="80" rightbottom="rightbottom">
+        <Image id="displaybg" image="display" action="move" lefttop="leftbottom" rightbottom="rightbottom"/>
+        <Image id="left cap" x="44" y="6" image="left" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Image id="right cap" x="249" y="6" image="right" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="progress bar" x="45" y="6" image="progress" action="move" lefttop="leftbottom" rightbottom="rightbottom"/>
+        <Slider id="progress slider" x="49" y="10" points="(0,0),(195,0)" thickness="3" value="time" tooltiptext="" up="knob" lefttop="leftbottom" rightbottom="rightbottom"/>
+        <Text text="$t" font="Lucida" alignment="center" id="time shadow" x="5" y="6" width="36" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Text text="$d" font="calibri" alignment="center" id="time2 shadow" x="251" y="6" width="40" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Text text="$t" font="calibri" alignment="center" color="#818181" id="time" x="5" y="4" width="36" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Text text="$d" font="calibri" alignment="center" color="#818181" id="time2" x="251" y="4" width="40" lefttop="rightbottom" rightbottom="rightbottom"/>
+        <Image id="foot ban" x="50" y="40" image="downban" lefttop="leftbottom" rightbottom="rightbottom"/>
+      </Panel>
+      <Panel id="bottom layout" y="270" width="294" height="23" lefttop="leftbottom" rightbottom="rightbottom">
+        <Image id="bottombg" image="bottom" action="move" lefttop="leftbottom" rightbottom="rightbottom"/>
+        <Image id="resize image" x="282" y="11" image="resize" action="resizeSE" lefttop="rightbottom" rightbottom="rightbottom"/>
+      </Panel>
+      <Panel id="play layout" x="97" y="271" width="100" height="20" lefttop="leftbottom" rightbottom="rightbottom" xkeepratio="true">
+        <Checkbox state="vlc.isPlaying" up1="play" up2="pause" action1="vlc.play()" action2="vlc.pause()" id="play icon" x="45" y="3" lefttop="leftbottom" rightbottom="rightbottom" xkeepratio="true"/>
+        <Button up="faster" action="vlc.faster()" id="faster icon" x="63" y="5" lefttop="leftbottom" rightbottom="rightbottom" xkeepratio="true"/>
+        <Button up="slower" action="vlc.slower()" id="slower icon" x="24" y="5" lefttop="leftbottom" rightbottom="rightbottom" xkeepratio="true"/>
+        <Button up="next" action="playlist.next()" id="next icon" x="83" y="5" lefttop="leftbottom" rightbottom="rightbottom" xkeepratio="true"/>
+        <Button up="back" action="playlist.previous()" id="back icon" x="4" y="5" lefttop="leftbottom" rightbottom="rightbottom" xkeepratio="true"/>
+      </Panel>
+      <Panel id="volume layout" x="3" y="271" width="100" height="20" lefttop="leftbottom" rightbottom="leftbottom">
+        <Image id="volue bg" x="26" y="7" image="volume" resize="scale" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Checkbox state="vlc.isMute" up1="speaker" up2="mute" action1="vlc.mute()" action2="vlc.mute()" id="speaker icon" x="10" y="5" lefttop="leftbottom" rightbottom="leftbottom"/>
+        <Slider id="volume slider" x="31" y="8" points="(2,2),(50,2)" thickness="8" value="volume" tooltiptext="$V%" up="volumeknob" lefttop="leftbottom" rightbottom="leftbottom"/>
+      </Panel>
+      <Panel id="controls" y="2" width="70" height="20">
+        <Button up="close" down="close2" action="vlc.quit()" id="close icon" x="8" y="3"/>
+        <Button up="fullscreen" down="fullscreen2" action="vlc.fullscreen()" id="max" x="26" y="3"/>
+        <Button up="minimize" down="minimize2" action="vlc.minimize()" id="mini" x="44" y="3"/>
+      </Panel>
+      <Video id="video" y="61" width="294" height="165" rightbottom="rightbottom"/>
+      <Image id="video bg" x="5" y="65" image="videobg" rightbottom="rightbottom"/>
+    </Layout>
+  </Window>
+
+</Theme>
