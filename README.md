@@ -1,15 +1,15 @@
 # vlcskinedit
  skin of vlc study
 
------�ȉ�����
-�@vlcskineditor���\�z���AJava��JRE���K�v�ł����B����32bit��JRE���p����Bwindows10�Ȃ�U�SBit��32bit�ł𗼕��Ƃ��C���X�g�[������Ζ���
-�Avlc���\�[�X�R�[�h����̃r���h���e�Ղł͂Ȃ��A�s�\�Ǝv���Ă��\��Ȃ��B
-�B�K������̉ۑ肪vlc�̖L�x�ȃR�}���h���C���I�v�V�����Ői�߂�ꂻ���ł��B
-��F
-�Đ������S����F
+-----以下メモ
+①vlcskineditor環境構築時、JavaのJREが必要ですが。実は32bit版JRE利用する。windows10なら６４Bitと32bit版を両方ともインストールすれば無難
+②vlcがソースコードからのビルドが容易ではない、不可能と思っても構わない。
+③幸い今回の課題がvlcの豊富なコマンドラインオプションで進められそうです。
+例：
+再生時ロゴ入れ：
 vlc --sub-source logo --logo-file logo73.png dan.mp4
 
-�X�L���t���N���F
+スキン付き起動：
 vlc.exe -Iskins
 
-���낢��g�����։\
+いろいろ組合せへ可能
